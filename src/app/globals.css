@@ -16,8 +16,23 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --grape: 114,35,204;    
   }
 }
+
+.light{
+  --grape: 114,35,204;    
+}
+
+
+.dark{
+  --grape: 0,0,0;    
+}
+
+.red{
+  --grape: 255,0,0;    
+}
+
 
 body {
   background: var(--background);
