@@ -13,7 +13,8 @@ export default function Home() {
     tl.fromTo(bodyRefrence.current,{
       opacity:0,
     }, {
-      duration: 1,
+      duration: 3,
+      stagger:0.1,
       opacity:1,
       scrollTrigger: {
         start:"50% top",
@@ -29,20 +30,25 @@ export default function Home() {
 
   return (
     <>
-      <div className="snap-y snap-mandatory overflow-y-scroll h-[300vh]">
-        <div className="snap-start h-[100vh] bg-red-100">
+      <div className="h-[300vh]">
+        <div className=" h-[100vh]">
           <h1
             ref={titleRefrence}
-            className="glitch pt-40 z-50 p-4 font-mono text-5xl text-cyan-400"
+            className="glitch pt-40 p-4 font-mono text-5xl text-cyan-400"
             
           >
             Welcome To my 3d portfolio
           </h1>
           <h2
-            className="snap-start text-xl bg-red-50"
+            className="text-xl "
             style={glitchyTextTitle} 
             ref={bodyRefrence}>
-            This is
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque autem, architecto sapiente dolore dolor maxime maiores dolorum? Est nobis maiores officiis quis! Ut et, saepe officiis deserunt quia iure dolore?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque autem, architecto sapiente dolore dolor maxime maiores dolorum? Est nobis maiores officiis quis! Ut et, saepe officiis deserunt quia iure dolore?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque autem, architecto sapiente dolore dolor maxime maiores dolorum? Est nobis maiores officiis quis! Ut et, saepe officiis deserunt quia iure dolore?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque autem, architecto sapiente dolore dolor maxime maiores dolorum? Est nobis maiores officiis quis! Ut et, saepe officiis deserunt quia iure dolore?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque autem, architecto sapiente dolore dolor maxime maiores dolorum? Est nobis maiores officiis quis! Ut et, saepe officiis deserunt quia iure dolore?
+         
           </h2>
         </div>
       </div>

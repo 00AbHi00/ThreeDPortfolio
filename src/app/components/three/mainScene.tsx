@@ -19,7 +19,6 @@ export const MainScene = () => {
         start: "10 10",
         end: "bottom bottom",
         scrub: true,
-        markers: true,
       },
     });
 
@@ -29,7 +28,8 @@ export const MainScene = () => {
       z:3,
       duration:3
     }).to(can1Ref.current.position,{
-        z:0,
+        x:30,
+        y:50,
     }
     )
   });
@@ -37,9 +37,9 @@ export const MainScene = () => {
   return (
       <group position={initialPosition} ref={can1Ref}>
         <mesh>
-          <sphereGeometry args={[1, 32, 32]} />
-          <meshPhysicalMaterial transmission={1}  ior={1.5} thickness={1} roughness={0.1} color={"black"}/>
+          <sphereGeometry  args={[1, 32, 32]} />
+          <meshPhysicalMaterial thickness={1} roughness={0.3} color={"black"}/>
         </mesh>
-      </group>
+        </group>
   );
 };
