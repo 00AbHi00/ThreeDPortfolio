@@ -20,7 +20,7 @@ export function MainCanvas() {
         </ambientLight>
         <Clouds material={THREE.MeshBasicMaterial}>
           <Cloud segments={3} bounds={[10, 2, 2]} volume={10} color="red" />
-          <Cloud seed={1} scale={2} volume={5} color="blue" fade={100} />
+          <Cloud seed={1} scale={2} volume={5} color="hotpink" fade={100} />
         </Clouds>
       </Canvas>
     </div>
