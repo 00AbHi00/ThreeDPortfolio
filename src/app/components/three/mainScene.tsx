@@ -28,11 +28,11 @@ export const MainScene = () => {
       z:-2,
       duration:10
     }).to(can1Ref.current.position,{
-        x:0,
+        x:5,
         y:1,
         z:-4,
         duration:10,
-        
+
 
     }
     )

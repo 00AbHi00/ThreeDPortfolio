@@ -1,5 +1,4 @@
 "use client";
-import "./glitch.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
@@ -11,18 +10,27 @@ export default function Home() {
   useGSAP(() => {
     const tl = gsap.timeline();
     tl.fromTo(bodyRefrence.current,{
-      opacity:0,
+      opacity:0.3,
     }, {
       duration: 3,
       stagger:0.1,
       opacity:1,
       scrollTrigger: {
-        start:"50% top",
+        start:"40% top",
         scrub: true,
         pin:true,
         trigger: titleRefrence.current,
       },
-    });
+    }).to(titleRefrence.current,
+      {
+        scale:0.5,
+        scrollTrigger: {
+          start:"10% top",
+          scrub: true,
+          trigger: titleRefrence.current,
+        },
+      }
+    )
   });
   const glitchyTextTitle = {
     textShadow: "0.15em 0.15em 2px rgba(255,255,255,0.3), -0.15em -0.15em 2px rgba(0,0,255,0.3) ",
@@ -31,10 +39,10 @@ export default function Home() {
   return (
     <>
       <div className="h-[300vh]">
-        <div className=" h-[100vh]">
+        <div className=" h-[100vh] flex flex-col">
           <h1
             ref={titleRefrence}
-            className="glitch pt-40 p-4 font-mono text-5xl text-cyan-400"
+            className=" pt-40 p-4 font-mono text-5xl text-cyan-400"
             
           >
             Welcome To my 3d portfolio
