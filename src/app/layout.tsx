@@ -4,7 +4,6 @@ import { MainCanvas } from "./components/three/mainCanvas";
 import { Header } from "./components/ui/header";
 
 import "./globals.css";
-import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
