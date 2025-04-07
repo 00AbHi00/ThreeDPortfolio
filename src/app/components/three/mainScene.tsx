@@ -23,7 +23,7 @@ export const MainScene = () => {
     });
 
     tl.to(can1Ref.current.position, {
-      x: 0, // Avoid large values as Three.js units are small
+      x: 0, 
       y: 1,
       z:-2,
       duration:10

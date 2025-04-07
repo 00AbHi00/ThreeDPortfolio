@@ -5,7 +5,7 @@ import { Canvas } from "@react-three/fiber";
 import { Clouds, Environment, OrbitControls } from "@react-three/drei";
 import { MainScene } from "./mainScene";
 import { usePathname } from "next/navigation";
-// import { Cloud } from "@react-three/drei";
+import { Cloud } from "@react-three/drei";
 // import { AmbientLight, Light } from "three";
 
 export function MainCanvas() {
