@@ -10,7 +10,7 @@ export const Header = () => {
       >
         <Link
           className="hover:bg-red-100/10 items-center p-3 h-full"
-          href={"/happy"}
+          href={"/"}
         >
           Home
         </Link>
