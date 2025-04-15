@@ -14,11 +14,14 @@ export default function Home() {
       {
         opacity: 0.3,
         scale: 1,
+        width:"100%",
+        textAlign:"center",
       },
       {
         duration: 3,
         stagger: 0.1,
         opacity: 1,
+        width:"90%",
         scrollTrigger: {
           start: "5% top",
           scrub: true,
