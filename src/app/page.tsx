@@ -1,10 +1,12 @@
 "use client";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
+  
+  const Sound1= new Audio("https://cdn.pixabay.com/audio/2022/03/24/audio_d8786ad8be.mp3")
   const titleRefrence = useRef<HTMLHeadingElement>(null);
   const bodyRefrence = useRef<HTMLHeadingElement>(null);
   useGSAP(() => {
@@ -42,6 +44,20 @@ export default function Home() {
       "0.15em 0.15em 2px rgba(255,255,255,0.3), -0.15em -0.15em 2px rgba(0,0,255,0.3) ",
   };
 
+  const playSoundOnScroll=()=>{
+    Sound1.play()
+  }   
+  
+  useEffect(()=>{
+    if(window)
+    {
+      window.addEventListener('scroll',playSoundOnScroll)
+      return()=>{
+        window.removeEventListener('scroll',playSoundOnScroll)
+      }
+    }
+  },[])
+
   return (
     <>
       <div className="h-[300vh]">
@@ -52,7 +68,7 @@ export default function Home() {
           >
             Welcome To my 3d portfolio
           </h1>
-          <h2 className="text-xl  " style={glitchyTextTitle} ref={bodyRefrence}>
+          <h2 className="text-xl mx-auto " style={glitchyTextTitle} ref={bodyRefrence}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
             autem, architecto sapiente dolore dolor maxime maiores dolorum? Est
             nobis maiores officiis quis! Ut et, saepe officiis deserunt quia
