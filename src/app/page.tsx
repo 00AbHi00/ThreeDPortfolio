@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
-  
+  // The idea of audio is fun maybe ill incorporate it on other sites as well for micro interations
   const Sound1= new Audio("https://cdn.pixabay.com/audio/2022/03/24/audio_d8786ad8be.mp3")
   const titleRefrence = useRef<HTMLHeadingElement>(null);
   const bodyRefrence = useRef<HTMLHeadingElement>(null);
