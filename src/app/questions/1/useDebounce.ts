@@ -1,4 +1,9 @@
+/*Custom hooks are also functions, for example this 
+ Hook returns debouncedValue
+*/ 
+
 'use client';
+
 
 import { useEffect, useState } from "react";
 

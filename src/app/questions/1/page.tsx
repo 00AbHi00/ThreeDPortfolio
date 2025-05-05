@@ -23,8 +23,15 @@ export default function FunctionName() {
             type="search" name="" id="" />              
         </div>
         <span className="">
-          {input}
-         De: {debouncedInp}
+          <div>
+            Input
+            {input}
+          </div>
+          <div>
+            Debounced Input
+            {debouncedInp}
+          </div>
+         
         </span>
     </div>
   );
