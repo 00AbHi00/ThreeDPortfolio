@@ -1,3 +1,4 @@
+// CURD and sort 
 "use client";
 
 import { useState } from "react";
@@ -73,9 +74,9 @@ export default function FunctionName() {
       <table className="shadow-md rounded border border-gray-200 m-3">
         <thead className="bg-gray-900">
           <tr>
-            <th className="px-4 py-2 border" onClick={sortAscendingKeys}>Key</th>
-            <th className="px-4 py-2 border" onClick={sortAscendingColor} >Color</th>
-            <th className="px-4 py-2 border" onClick={sortAscendingCal}>Calories</th>
+            <th className="px-4 py-2 border" onClick={sortAscendingKeys}>⬇️ Key</th>
+            <th className="px-4 py-2 border" onClick={sortAscendingColor} >⬇️Color</th>
+            <th className="px-4 py-2 border" onClick={sortAscendingCal}>⬇️Calories</th>
             <th className="px-4 py-2 border">Remove</th>
           </tr>
         </thead>
