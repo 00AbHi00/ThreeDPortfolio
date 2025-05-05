@@ -12,11 +12,14 @@ export default function useDebounce(value: String, delay: number = 1000) {
 
   useEffect(() => {
       const timer = setTimeout(() => {
-          setDebouncedValue(value)
+        if(value!=debouncedValue)
+          {
+            setDebouncedValue(value)
+          } 
     }, delay);
 
     return () => clearTimeout(timer);
   }, [value, delay]);
-
+  
   return debouncedValue;
 }

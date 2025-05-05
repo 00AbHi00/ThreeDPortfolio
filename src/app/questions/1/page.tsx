@@ -4,7 +4,11 @@ import useDebounce from "./useDebounce";
 export default function FunctionName() {
     const InputRef=useRef<HTMLInputElement>(null)
     const [input, setInput]= useState('');
-    const debouncedInp=useDebounce(input,1000)
+    
+    
+    const debouncedInp=useDebounce(InputRef.current?.value||'',1000)
+    // Using use State rerenders the component, so we can use ref to avoiod doing this
+
     const handleChange=(e:React.ChangeEvent<HTMLInputElement>)=>
     {
       if(InputRef.current)
